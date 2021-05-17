@@ -10,3 +10,4 @@ public class CurrencyExchangeServiceApplicationH2 {
 		SpringApplication.run(CurrencyExchangeServiceApplicationH2.class, args);
 	}
 }
+ 
