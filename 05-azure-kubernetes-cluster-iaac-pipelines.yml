@@ -22,6 +22,7 @@ steps:
     workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes/'
     commandOptions: '-var client_id=$(client_id) -var client-secret=$(client_secret) -var ssh_public_key=$(publickey.secureFile)'
     backendType: 'azurerm'
+    backendServiceArm: 'Azure Pass - Sponsorship(45a98b9e-3136-4ef6-bbab-ce16c1adde09)'
     ensureBackend: true
     backendAzureRmResourceGroupName: 'terraform-backend-rg'
     backendAzureRmResourceGroupLocation: 'westeurope'
