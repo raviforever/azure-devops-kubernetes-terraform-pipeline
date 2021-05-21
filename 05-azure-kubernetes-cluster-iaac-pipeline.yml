@@ -12,10 +12,7 @@ pool:
 steps:
 - script: echo K8S terraform Azure!
   displayName: 'Run a one-line script'
-- task: DownloadSecureFile@1
-  name: mySecureFile
-  inputs:
-    secureFile: 'azure_rsa.pub'
+
 - task: TerraformCLI@0
   inputs:
     command: 'init'
@@ -30,12 +27,5 @@ steps:
     backendAzureRmContainerName: 'storageacctravikumarcontainer'
     backendAzureRmKey: 'kubernetes-dev.tfstate'
 
-- task: TerraformCLI@0
-  inputs:
-    command: 'apply'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
-    environmentServiceName: 'Azure Pass - Sponsorship(1)(45a98b9e-3136-4ef6-bbab-ce16c1adde09)'
-    runAzLogin: true
-    commandOptions: '-var client_id=$(client_id) -var client-secret=$(client_secret) -var ssh_public_key=$(mySecureFile.secureFilePath)'
-    allowTelemetryCollection: true
+
     
