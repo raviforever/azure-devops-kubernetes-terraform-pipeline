@@ -21,10 +21,10 @@ steps:
     backendType: 'azurerm'
     backendServiceArm: 'azure-resource-manager-service-connection'
     ensureBackend: true
-    backendAzureRmResourceGroupName: 'terraform-backend-rg'
+    backendAzureRmResourceGroupName: 'terraform-backend-rga'
     backendAzureRmResourceGroupLocation: 'westeurope'
-    backendAzureRmStorageAccountName: 'storageacctravikumarxyz'
-    backendAzureRmContainerName: 'storageacctravikumarcontainer'
+    backendAzureRmStorageAccountName: 'storageacctravikumarxyza'
+    backendAzureRmContainerName: 'storageacctravikumarcontainera'
     backendAzureRmKey: 'kubernetes-dev.tfstate'
 
 - task: TerraformCLI@0
