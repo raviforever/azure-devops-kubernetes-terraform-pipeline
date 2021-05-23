@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "in28minutescluster-29f3"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "in28minutescluster-29f3"
+  template:
+    metadata:
+      labels:
+        app: "in28minutescluster-29f3"
+    spec:
+      containers:
+        - name: "in28minutescluster-29f3"
+          image: "dummytest1234.azurecr.io/in28minutescluster"
+          ports:
+          - containerPort: 8000
